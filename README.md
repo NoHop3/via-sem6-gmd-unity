@@ -1,4 +1,4 @@
-### Recipe list android app made for the AND Course (Semester 4) at VIA University College. 
+### [Game theme to be decided] unity project made for the GMD Course (Semester 6) at VIA University College. 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/5/5d/VIA_UC_logo.png)
 
 ### App Requirements
