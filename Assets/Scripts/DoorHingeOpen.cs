@@ -17,22 +17,27 @@ public class DoorHingeOpen : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (TheDistance <= 3)
+        if (TheDistance <= 2)
         {
-            ActionText.GetComponent<Text>().text = "Open Door";
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
         }
         if (Input.GetButtonDown("Action"))
         {
-            if (TheDistance <= 3)
+            if (TheDistance <= 2)
             {
                 this.GetComponent<BoxCollider>().enabled = false;
                 ActionDisplay.SetActive(false);
                 ActionText.SetActive(false);
-                TheDoorHinge.GetComponent<Animation>().Play("DoorHingeOpen");
+                TheDoorHinge.GetComponent<Animation>().Play("FirstDoorOpenAnim");
                 CreakSound.Play();
             }
         }
+    }
+
+    void OnMouseExit()
+    {
+        ActionDisplay.SetActive(false);
+        ActionText.SetActive(false);
     }
 }
