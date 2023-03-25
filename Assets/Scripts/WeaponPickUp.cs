@@ -12,6 +12,7 @@ public class WeaponPickUp : MonoBehaviour
     public GameObject PlayerPistol;
     public GameObject GuideArrow;
     public GameObject ExtraCrosshair;
+    public GameObject JumpScareTrigger;
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
@@ -37,6 +38,7 @@ public class WeaponPickUp : MonoBehaviour
                 PlayerPistol.SetActive(true);
                 ExtraCrosshair.SetActive(false);
                 GuideArrow.SetActive(false);
+                JumpScareTrigger.SetActive(true);
             }
         }
     }
