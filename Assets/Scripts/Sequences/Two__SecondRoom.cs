@@ -10,7 +10,7 @@ public class Two__SecondRoom : MonoBehaviour
     public GameObject TextBox;
     public GameObject TheMarker;
 
-    void onStart()
+    void Start()
     {
         TheMarker.SetActive(false);
     }

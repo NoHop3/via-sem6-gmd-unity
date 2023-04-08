@@ -9,11 +9,9 @@ public class JumpScript : MonoBehaviour
     public GameObject TheZombie;
     public GameObject TheDoor;
 
-    void onTriggerEnter()
-    {
-        GetComponent<BoxCollider>().enabled = false;
-        TheDoor.GetComponent<Animation>().Play("JumpDoorAnim");
+    void Start() {
         DoorBang.Play();
+        TheDoor.GetComponent<Animation>().Play("JumpDoorAnim");
         TheZombie.SetActive(true);
         StartCoroutine(PlayJumpscareMusic());
     }
