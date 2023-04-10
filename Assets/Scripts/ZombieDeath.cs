@@ -24,17 +24,11 @@ public class ZombieDeath : MonoBehaviour
     {
         if(EnemyHealth <= 0 && StatusCheck == 0)
         {
-            StatusCheck = 2;
+            StatusCheck = 1;
             TheEnemy.GetComponent<Animation>().Stop("walk");
             TheEnemy.GetComponent<Animation>().Play("death2");
-            StartCoroutine(KillEnemy());
+            TheEnemy.GetComponent<BoxCollider>().enabled = false;
+            JumpScareSound.Stop();
         }   
-    }
-
-    IEnumerator KillEnemy()
-    {
-        TheEnemy.GetComponent<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(4f);
-        JumpScareSound.Stop();
     }
 }
