@@ -9,7 +9,6 @@ public class Two__SecondRoom : MonoBehaviour
     public GameObject ThePlayer;
     public GameObject TextBox;
     public GameObject TheMarker;
-    public GameObject TheTrigger;
 
     void Start()
     {
@@ -18,6 +17,7 @@ public class Two__SecondRoom : MonoBehaviour
     
     void OnTriggerEnter()
     {
+        this.GetComponent<BoxCollider>().enabled = false;
         ThePlayer.GetComponent<FirstPersonController>().enabled = false;
         StartCoroutine(ScenePlayer());
     }
@@ -29,7 +29,6 @@ public class Two__SecondRoom : MonoBehaviour
         TextBox.GetComponent<Text>().text = "";
         ThePlayer.GetComponent<FirstPersonController>().enabled = true;
         TheMarker.SetActive(true);
-        TheTrigger.SetActive(false);
     }
 }
 

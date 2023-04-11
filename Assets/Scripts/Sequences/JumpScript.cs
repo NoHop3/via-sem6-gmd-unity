@@ -8,10 +8,9 @@ public class JumpScript : MonoBehaviour
     public AudioSource DoorBang;
     public GameObject TheZombie;
     public GameObject TheDoor;
-    public GameObject JumpScareTrigger;
-
     void OnTriggerEnter()
     {
+        this.GetComponent<BoxCollider>().enabled = false;
         DoorBang.Play();
         TheDoor.GetComponent<Animation>().Play("JumpDoorAnim");
         TheZombie.SetActive(true);
@@ -22,6 +21,5 @@ public class JumpScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         JumpscareMusic.Play();
-        JumpScareTrigger.SetActive(false);
     }
 }

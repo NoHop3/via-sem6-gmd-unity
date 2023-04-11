@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalHealth : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class GlobalHealth : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(CurrentHealth);
         InternalHealth = CurrentHealth;
+        if (CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
