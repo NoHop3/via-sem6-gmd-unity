@@ -16,6 +16,8 @@ public class JumpScript : MonoBehaviour
         StartCoroutine(PlayJumpscareMusic());
     }
 
+    // Add OnTriggerEnter() here
+
     IEnumerator PlayJumpscareMusic()
     {
         yield return new WaitForSeconds(0.5f);

@@ -32,12 +32,12 @@ public class ZombieAI : MonoBehaviour
         }
     }
 
-    void onTriggerEnter()
+    void OnTriggerEnter()
     {
         AttackTrigger = true;
     }
 
-    void onTriggerExit()
+    void OnTriggerExit()
     {
         AttackTrigger = false;
     }
