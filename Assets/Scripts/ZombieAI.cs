@@ -17,8 +17,6 @@ public class ZombieAI : MonoBehaviour
 
     void Update()
     {
-        if (ZombieDeath.EnemyHealth > 0)
-        {
             transform.LookAt(ThePlayer.transform);
             if (AttackTrigger == false)
             {
@@ -36,7 +34,6 @@ public class ZombieAI : MonoBehaviour
                     StartCoroutine(InflictDamage());
                 }
             }
-        }
     }
 
     void OnTriggerEnter()
