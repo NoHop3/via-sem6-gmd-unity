@@ -13,21 +13,24 @@ public class ZombieAI : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(ThePlayer.transform);
-        if(AttackTrigger == false)
+        if (ZombieDeath.EnemyHealth > 0)
         {
-            EnemySpeed = 0.01f;
-            TheEnemy.GetComponent<Animation>().Play("walk");
-            transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, EnemySpeed);
-        }
-        if(AttackTrigger == true)
-        {
-            EnemySpeed = 0;
-            TheEnemy.GetComponent<Animation>().Stop("walk");
-            if(IsAttacking == false)
+            transform.LookAt(ThePlayer.transform);
+            if (AttackTrigger == false)
             {
-                TheEnemy.GetComponent<Animation>().Play("atack1");
-                StartCoroutine(InflictDamage());
+                EnemySpeed = 0.01f;
+                TheEnemy.GetComponent<Animation>().Play("walk");
+                transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, EnemySpeed);
+            }
+            if (AttackTrigger == true)
+            {
+                EnemySpeed = 0;
+                TheEnemy.GetComponent<Animation>().Stop("walk");
+                if (IsAttacking == false)
+                {
+                    TheEnemy.GetComponent<Animation>().Play("atack1");
+                    StartCoroutine(InflictDamage());
+                }
             }
         }
     }
@@ -47,7 +50,7 @@ public class ZombieAI : MonoBehaviour
         IsAttacking = true;
         yield return new WaitForSeconds(2f);
         GlobalHealth.CurrentHealth -= 5;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         IsAttacking = false;
     }
 }

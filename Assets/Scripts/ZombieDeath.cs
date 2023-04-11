@@ -5,7 +5,8 @@ using UnityEngine;
 public class ZombieDeath : MonoBehaviour
 {
     
-    public int EnemyHealth = 20;
+    public static int EnemyHealth = 20;
+    public int ZombieHealth = 20;
     public GameObject TheEnemy;
     public int StatusCheck;
     public AudioSource JumpScareSound;
@@ -14,9 +15,10 @@ public class ZombieDeath : MonoBehaviour
     {
         if(StatusCheck == 0)
         {
-            EnemyHealth -= DamageAmount;
+            ZombieHealth -= DamageAmount;
             TheEnemy.GetComponent<Animation>().Play("gethit");
             TheEnemy.GetComponent<Animation>().PlayQueued("walk");
+            EnemyHealth = ZombieHealth;
         }
     }
 
@@ -27,7 +29,6 @@ public class ZombieDeath : MonoBehaviour
             StatusCheck = 1;
             TheEnemy.GetComponent<Animation>().Stop("walk");
             TheEnemy.GetComponent<Animation>().Play("death2");
-            TheEnemy.GetComponent<BoxCollider>().enabled = false;
             JumpScareSound.Stop();
         }   
     }

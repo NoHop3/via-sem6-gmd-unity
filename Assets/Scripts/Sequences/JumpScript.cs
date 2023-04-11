@@ -8,20 +8,20 @@ public class JumpScript : MonoBehaviour
     public AudioSource DoorBang;
     public GameObject TheZombie;
     public GameObject TheDoor;
+    public GameObject JumpScareTrigger;
 
-    void Start() {
+    void OnTriggerEnter()
+    {
         DoorBang.Play();
         TheDoor.GetComponent<Animation>().Play("JumpDoorAnim");
         TheZombie.SetActive(true);
         StartCoroutine(PlayJumpscareMusic());
     }
 
-    // Add OnTriggerEnter() here
-
     IEnumerator PlayJumpscareMusic()
     {
         yield return new WaitForSeconds(0.5f);
         JumpscareMusic.Play();
-
+        JumpScareTrigger.SetActive(false);
     }
 }

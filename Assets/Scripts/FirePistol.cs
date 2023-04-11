@@ -32,9 +32,8 @@ public class FirePistol : MonoBehaviour
             TargetDistance = Shot.distance;
             Shot.transform.SendMessage("DamageZombie", DamageAmount, SendMessageOptions.DontRequireReceiver);
         }
-        TheGun.GetComponent<Animation>().Play("PistolShotAnim");
-        TheGun.GetComponent<Animation>().Play("MuzzleAnim");
         MuzzleFlash.SetActive(true);
+        TheGun.GetComponent<Animation>().Play("PistolShotAnim");
         GunFire.Play();
         yield return new WaitForSeconds(0.5f);
         MuzzleFlash.SetActive(false);
