@@ -1018,6 +1018,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &215215539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: bc1ef08b60909cc43bcd626d1000a5fc, type: 3}
+  m_PrefabInstance: {fileID: 151944955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &215215542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215215539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &249171271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1348,7 @@ GameObject:
   - component: {fileID: 309715566}
   - component: {fileID: 306291272}
   - component: {fileID: 307290248}
+  - component: {fileID: 309715567}
   m_Layer: 0
   m_Name: pCube5
   m_TagString: Untagged
@@ -1416,6 +1435,19 @@ Transform:
   m_Father: {fileID: 1807557869}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &309715567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309493326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16739334, y: 0.35671732, z: 0.0144759165}
+  m_Center: {x: 0.018132644, y: -0.0038508628, z: 0.000000028405337}
 --- !u!1 &317121030
 GameObject:
   m_ObjectHideFlags: 0
@@ -16343,7 +16375,7 @@ BoxCollider:
   m_GameObject: {fileID: 1807557868}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
