@@ -1,7 +1,7 @@
 ### SURVIVAL HORROR GAME unity project made for the GMD Course (Semester 6) at VIA University College. 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/5/5d/VIA_UC_logo.png)
 
-### App Requirements
+### Game Requirements
 ![image](https://user-images.githubusercontent.com/82092907/224055115-42dbe32d-a131-446e-bc0a-dd216099dfb6.png)
 
 ### Contributors
