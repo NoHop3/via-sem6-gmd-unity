@@ -10,7 +10,6 @@ public class GlobalHealth : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(CurrentHealth);
         InternalHealth = CurrentHealth;
         if (CurrentHealth <= 0)
         {

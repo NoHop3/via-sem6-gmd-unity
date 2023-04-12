@@ -8,6 +8,8 @@ public class JumpScript : MonoBehaviour
     public AudioSource DoorBang;
     public GameObject TheZombie;
     public GameObject TheDoor;
+    public AudioSource AmbientMusic;
+
     void OnTriggerEnter()
     {
         this.GetComponent<BoxCollider>().enabled = false;
@@ -20,6 +22,7 @@ public class JumpScript : MonoBehaviour
     IEnumerator PlayJumpscareMusic()
     {
         yield return new WaitForSeconds(0.5f);
+        AmbientMusic.Pause();
         JumpscareMusic.Play();
     }
 }
