@@ -9,6 +9,7 @@ public class Two__SecondRoom : MonoBehaviour
     public GameObject ThePlayer;
     public GameObject TextBox;
     public GameObject TheMarker;
+    public AudioSource VoiceOver03;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class Two__SecondRoom : MonoBehaviour
 
     IEnumerator ScenePlayer()
     {
-        TextBox.GetComponent<Text>().text = "Hmm... There seems to be something on the table there...";
+        TextBox.GetComponent<Text>().text = "Looks like there is a weapon on that table.";
+        VoiceOver03.Play();
         yield return new WaitForSeconds(2);
         TextBox.GetComponent<Text>().text = "";
         ThePlayer.GetComponent<FirstPersonController>().enabled = true;
