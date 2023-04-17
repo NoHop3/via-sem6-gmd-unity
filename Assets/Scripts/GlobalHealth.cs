@@ -13,7 +13,7 @@ public class GlobalHealth : MonoBehaviour
         InternalHealth = CurrentHealth;
         if (CurrentHealth <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
 }
