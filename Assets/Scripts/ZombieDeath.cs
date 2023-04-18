@@ -15,6 +15,7 @@ public class ZombieDeath : MonoBehaviour
         if (StatusCheck == 0)
         {
             ZombieHealth -= DamageAmount;
+            TheEnemy.GetComponent<Animation>().Stop("walk");
             TheEnemy.GetComponent<Animation>().Play("gethit");
             TheEnemy.GetComponent<Animation>().PlayQueued("walk");
         }
