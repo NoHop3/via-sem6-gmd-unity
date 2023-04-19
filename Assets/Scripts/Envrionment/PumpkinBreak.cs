@@ -10,7 +10,7 @@ public class PumpkinBreak : MonoBehaviour
     public AudioSource PumpkinSmash;
     public GameObject KeyObject;
     public GameObject KeyPickUpTrig;
-    void DamageZombie(int DamageAmount)
+    void PistolShot(int DamageAmount)
     {
         StartCoroutine(BreakPumpkin());
     }

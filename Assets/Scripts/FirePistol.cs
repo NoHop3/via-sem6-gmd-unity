@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirePistol : MonoBehaviour
 {
-    
+
     public GameObject TheGun;
     public GameObject MuzzleFlash;
     public AudioSource GunFire;
@@ -14,9 +14,9 @@ public class FirePistol : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && GlobalAmmo.AmmoCount > 0)
+        if (Input.GetButtonDown("Fire1") && GlobalAmmo.AmmoCount > 0)
         {
-            if(isFiring == false)
+            if (isFiring == false)
             {
                 GlobalAmmo.AmmoCount -= 1;
                 StartCoroutine(FiringPistol());
@@ -28,10 +28,10 @@ public class FirePistol : MonoBehaviour
     {
         RaycastHit Shot;
         isFiring = true;
-        if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out Shot))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot))
         {
             TargetDistance = Shot.distance;
-            Shot.transform.SendMessage("DamageZombie", DamageAmount, SendMessageOptions.DontRequireReceiver);
+            Shot.transform.SendMessage("PistolShot", DamageAmount, SendMessageOptions.DontRequireReceiver);
         }
         MuzzleFlash.SetActive(true);
         TheGun.GetComponent<Animation>().Play("PistolShotAnim");

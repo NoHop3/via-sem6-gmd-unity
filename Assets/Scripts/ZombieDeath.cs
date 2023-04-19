@@ -10,7 +10,7 @@ public class ZombieDeath : MonoBehaviour
     public AudioSource JumpScareSound;
     public AudioSource AmbientSound;
 
-    void DamageZombie(int DamageAmount)
+    void PistolShot(int DamageAmount)
     {
         if (StatusCheck == 0)
         {

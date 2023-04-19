@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LeftEyePickUp : MonoBehaviour
+public class RightEyePickUp : MonoBehaviour
 {
     public float TheDistance;
     public GameObject ActionDisplay;
     public GameObject ActionText;
     public GameObject ExtraCrosshair;
-    public GameObject LeftEye;
+    public GameObject RightEye;
     public GameObject HalfFade;
     public GameObject EyeImg;
     public GameObject EyeText;
+    public GameObject FakeWall;
+    public GameObject RealWall;
+    public GameObject RealWallCandle;
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
@@ -23,7 +26,7 @@ public class LeftEyePickUp : MonoBehaviour
         if (TheDistance <= 3)
         {
             ExtraCrosshair.SetActive(true);
-            ActionText.GetComponent<Text>().text = "Pick up left eye";
+            ActionText.GetComponent<Text>().text = "Pick up right eye";
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
         }
@@ -35,7 +38,7 @@ public class LeftEyePickUp : MonoBehaviour
                 ActionDisplay.SetActive(false);
                 ActionText.SetActive(false);
                 ExtraCrosshair.SetActive(false);
-                GlobalInventory.HasLeftEye = true;
+                GlobalInventory.HasRightEye = true;
                 StartCoroutine(EyePicked());
             }
         }
@@ -52,12 +55,15 @@ public class LeftEyePickUp : MonoBehaviour
     {
         HalfFade.SetActive(true);
         EyeImg.SetActive(true);
-        EyeText.GetComponent<Text>().text = "You got the left eye piece!";
+        EyeText.GetComponent<Text>().text = "You got the right eye piece!";
         EyeText.SetActive(true);
         yield return new WaitForSeconds(3);
         HalfFade.SetActive(false);
         EyeImg.SetActive(false);
         EyeText.SetActive(false);
-        LeftEye.SetActive(false);
+        RightEye.SetActive(false);
+        FakeWall.SetActive(false);
+        RealWall.SetActive(true);
+        RealWallCandle.SetActive(true);
     }
 }
