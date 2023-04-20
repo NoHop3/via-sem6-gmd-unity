@@ -20,6 +20,12 @@
 | 7  | Dwarven Expedition Pack - Stylized Assets | Tobyfredson | [Link](https://assetstore.unity.com/packages/3d/environments/dungeons/dwarven-expedition-pack-stylized-assets-155149) | Free |
 | 8  | Unity Standard Assets | Unity Technologies | [Link](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351) | Free (No longer available in asset store - I downloaded them as zip from unity forums) |
 | 9 | Zombie | PxlTiger | [Link](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) | Free |
+| 10 | Mixamo - library for 3D characters & animations | Adobe | [Link](https://www.mixamo.com/) | Free |
+| 11 | Pixabay - library for FX | Pixabay | [Link](https://pixabay.com/sound-effects/) | Free |
+| 12 | Jimmy Vegas' website for some materials, textures & prefabs | Jimmy Vegas | [Link](https://jvunity.weebly.com/) | Free |
+| 13 | I got inspired by: Jimmy Vegas' youtube channel | Jimmy Vegas | [Link](https://www.youtube.com/@JimmyVegasUnity) | Free |
+| 14 | I got inspired by: Jimmy Vegas' survival horror tutorial | Jimmy Vegas | [Link](https://www.youtube.com/watch?v=fSTQoClEAEQ&list=PLI5KGtDrj4HVInyXdx5N2oYUAb9U7rJ4L&index=79&ab_channel=JimmyVegas) | Free |
+
 
 ### Progress bar
 - [x] Initial commit of the app (09.03.2023)
@@ -28,5 +34,3 @@
 - [ ] Handin of the game project (08.05.2023)
 
 ### [Youtube Preview of the app: To be added....]()
-
-[I got inspired by: Jimmy Vegas](https://www.youtube.com/@JimmyVegasUnity) 
