@@ -15540,6 +15540,11 @@ MonoBehaviour:
   StalkerIsBeingHit: 0
   StalkerIsHitting: 0
   StalkerDead: 0
+  Hurt1: {fileID: 239995127}
+  Hurt2: {fileID: 141603229}
+  Hurt3: {fileID: 719635700}
+  RandomHurt: 0
+  TheFlash: {fileID: 266550334}
 --- !u!195 &1019780446
 NavMeshAgent:
   m_ObjectHideFlags: 0
