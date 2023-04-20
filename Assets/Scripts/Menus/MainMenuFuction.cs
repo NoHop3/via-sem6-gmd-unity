@@ -8,6 +8,16 @@ public class MainMenuFuction : MonoBehaviour
 
     public GameObject fadeOut;
     public AudioSource buttonSound;
+    public GameObject LoadButton;
+    public int LoadInt;
+    void Start()
+    {
+        LoadInt = PlayerPrefs.GetInt("AutoSave");
+        if (LoadInt > 0)
+        {
+            LoadButton.SetActive(true);
+        }
+    }
     public void NewGameButton()
     {
         StartCoroutine(NewGameStart());
@@ -20,5 +30,19 @@ public class MainMenuFuction : MonoBehaviour
         fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(4);
+    }
+
+    public void LoadGameButton()
+    {
+        StartCoroutine(LoadGameStart());
+    }
+
+    IEnumerator LoadGameStart()
+    {
+        fadeOut.SetActive(true);
+        buttonSound.Play();
+        fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(LoadInt);
     }
 }
