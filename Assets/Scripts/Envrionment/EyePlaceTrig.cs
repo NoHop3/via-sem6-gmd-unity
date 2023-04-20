@@ -61,6 +61,7 @@ public class EyePlaceTrig : MonoBehaviour
         RealSphere.SetActive(false);
         RealWall.GetComponent<Animator>().Play("WallMove");
         WallMoveSound.Play();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        RealWall.SetActive(false);
     }
 }
