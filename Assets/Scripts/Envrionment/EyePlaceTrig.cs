@@ -3,31 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RightEyePickUp : MonoBehaviour
+public class EyePlaceTrig : MonoBehaviour
 {
     public float TheDistance;
+    public GameObject RealSphere;
+    public GameObject FakeSphere;
     public GameObject ActionDisplay;
     public GameObject ActionText;
     public GameObject ExtraCrosshair;
-    public GameObject RightEye;
-    public GameObject HalfFade;
-    public GameObject EyeImg;
-    public GameObject EyeText;
+    public AudioSource WallMoveSound;
+    public AudioSource RollEyeSound;
     public GameObject FakeWall;
     public GameObject RealWall;
-    public GameObject RealWallCandle;
-    public GameObject FakeSphere;
+
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
     }
-
     void OnMouseOver()
     {
         if (TheDistance <= 3)
         {
             ExtraCrosshair.SetActive(true);
-            ActionText.GetComponent<Text>().text = "Pick up right eye";
+            ActionText.GetComponent<Text>().text = "Place Eye in the sphere...";
             ActionDisplay.SetActive(true);
             ActionText.SetActive(true);
         }
@@ -39,8 +37,7 @@ public class RightEyePickUp : MonoBehaviour
                 ActionDisplay.SetActive(false);
                 ActionText.SetActive(false);
                 ExtraCrosshair.SetActive(false);
-                GlobalInventory.HasRightEye = true;
-                StartCoroutine(EyePicked());
+                StartCoroutine(StartEyeEffect());
             }
         }
     }
@@ -52,24 +49,18 @@ public class RightEyePickUp : MonoBehaviour
         ActionText.SetActive(false);
     }
 
-    IEnumerator EyePicked()
+    IEnumerator StartEyeEffect()
     {
-        RightEye.GetComponent<MeshRenderer>().enabled = false;
-        HalfFade.SetActive(true);
-        EyeImg.SetActive(true);
-        EyeText.GetComponent<Text>().text = "You got the right eye piece!";
-        EyeText.SetActive(true);
-        yield return new WaitForSeconds(3);
-        HalfFade.SetActive(false);
-        EyeImg.SetActive(false);
-        EyeText.SetActive(false);
-        if(GlobalInventory.HasLeftEye == true)
-        {
-            FakeWall.SetActive(false);
-            RealWall.SetActive(true);
-            RealWallCandle.SetActive(true);
-            FakeSphere.SetActive(true);
-        }
-        RightEye.SetActive(false);
+        FakeSphere.SetActive(false);
+        RealSphere.SetActive(true);
+        RollEyeSound.Play();
+        RealSphere.GetComponent<Animator>().Play("EyeRolling");
+        yield return new WaitForSeconds(2);
+        RealSphere.GetComponent<Animator>().Play("EyeHide");
+        yield return new WaitForSeconds(0.5f);
+        RealSphere.SetActive(false);
+        RealWall.GetComponent<Animator>().Play("WallMove");
+        WallMoveSound.Play();
+        yield return new WaitForSeconds(2);
     }
 }

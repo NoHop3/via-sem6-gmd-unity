@@ -13,6 +13,10 @@ public class LeftEyePickUp : MonoBehaviour
     public GameObject HalfFade;
     public GameObject EyeImg;
     public GameObject EyeText;
+    public GameObject FakeWall;
+    public GameObject RealWall;
+    public GameObject RealWallCandle;
+    public GameObject FakeSphere;
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
@@ -50,6 +54,7 @@ public class LeftEyePickUp : MonoBehaviour
 
     IEnumerator EyePicked()
     {
+        LeftEye.GetComponent<MeshRenderer>().enabled = false;
         HalfFade.SetActive(true);
         EyeImg.SetActive(true);
         EyeText.GetComponent<Text>().text = "You got the left eye piece!";
@@ -58,6 +63,13 @@ public class LeftEyePickUp : MonoBehaviour
         HalfFade.SetActive(false);
         EyeImg.SetActive(false);
         EyeText.SetActive(false);
+        if (GlobalInventory.HasRightEye == true)
+        {
+            FakeWall.SetActive(false);
+            RealWall.SetActive(true);
+            RealWallCandle.SetActive(true);
+            FakeSphere.SetActive(true);
+        }
         LeftEye.SetActive(false);
     }
 }
