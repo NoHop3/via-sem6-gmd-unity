@@ -7,21 +7,17 @@
 ### Contributors
 - Stefan Georgiev (304284)
 
-### Game backlog
-#### Estimates for story points on a scale of 1 to 10:
-- 1 -> 1-2 hours
-- 10 -> 19-20 hours
+### Game assets
 
-| ID | Priority | Description   | Estimate  | Approved | 
-| -- | -------  |:-------------:| :--------:| :------: | 
-| 1  | Critical | As a user I would like to roam around the game |   8     | ✔️ | 
-| 2  | Critical | As a user I would like to have an eerie feeling in the game |   8     | ✔️ | 
-| 3  | High | As a user I would like to face jumpscares (yikes!) |    5     | ✔️      |
-| 4  | High | As a user I would like to be able to find the evil zombies |    5     | ✔️     |
-| 5  | High | As a user I would like to feel helpless if there is no ammo |    5     | ✔️      |
-| 6  | Low | As a user I would like to hopefully not die but able to die if I am a bad player |    3     | ✔️      |
-| 7  | Low | As a user I would like to hear ambient music |    3     | ✔️      |
-| 8  | Low | As a user I would like to finish the game |    3     | ❌      |
+| ID | Name | Publisher |  Link   | Price  | 
+| -- |:-------:|:-------------:|:--------:|:--------:|
+| 1  | Hungry Zombie | ANDRYUHA1981 | [Link](https://assetstore.unity.com/packages/3d/characters/hungry-zombie-99750) | Free |
+| 2  | Skybox Series Free | AVIONX | [Link](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633) | Free |
+| 3  | The Shed | BLACKANT MASTER STUDIO | [Link](https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303) | Free |
+| 4  | Old "USSR" Lamp | ESSPLASHKID | [Link](https://assetstore.unity.com/packages/3d/props/electronics/old-ussr-lamp-110400) | Free |
+| 5  | Breakable Spooky Pumpkins | 3D.RINA | [Link](https://assetstore.unity.com/packages/3d/props/food/breakable-spooky-pumpkins-12060) | Free |
+| 6  | Blacksmith's Forge | 3DFORGE | [Link](https://assetstore.unity.com/packages/3d/environments/fantasy/blacksmith-s-forge-17785) | Free | 
+| 7  | Dwarven Expedition Pack - Stylized Assets | TOBYFREDSON | [Link](https://assetstore.unity.com/packages/3d/environments/dungeons/dwarven-expedition-pack-stylized-assets-155149) | Free |
 
 ### Progress bar
 - [x] Initial commit of the app (09.03.2023)
