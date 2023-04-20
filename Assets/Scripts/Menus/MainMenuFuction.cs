@@ -22,7 +22,7 @@ public class MainMenuFuction : MonoBehaviour
     {
         StartCoroutine(NewGameStart());
     }
-    
+
     IEnumerator NewGameStart()
     {
         fadeOut.SetActive(true);
@@ -44,5 +44,58 @@ public class MainMenuFuction : MonoBehaviour
         fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(LoadInt);
+    }
+
+    public void QuitGameButton()
+    {
+        StartCoroutine(QuitGameStart());
+    }
+
+    IEnumerator QuitGameStart()
+    {
+        fadeOut.SetActive(true);
+        buttonSound.Play();
+        fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
+        yield return new WaitForSeconds(3);
+        Application.Quit();
+    }
+
+    //! This is for the options menu, but I'm not using it right now.
+    // public void OptionsButton()
+    // {
+    //     StartCoroutine(OptionsStart());
+    // }
+
+    // IEnumerator OptionsStart()
+    // {
+    //     fadeOut.SetActive(true);
+    //     buttonSound.Play();
+    //     fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
+    //     yield return new WaitForSeconds(3);
+    //     SceneManager.LoadScene(1);
+    // }
+
+    public void CreditsButton()
+    {
+        StartCoroutine(CreditsStart());
+    }
+
+    IEnumerator CreditsStart()
+    {
+        fadeOut.SetActive(true);
+        buttonSound.Play();
+        fadeOut.GetComponent<Animation>().Play("FadeScreenOut");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(6);
+    }
+
+    public void GithubButton()
+    {
+        Application.OpenURL("https://github.com/NoHop3");
+    }
+
+    public void PortfolioButton()
+    {
+        Application.OpenURL("https://stgdev.netlify.app/");
     }
 }
