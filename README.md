@@ -11,7 +11,7 @@
 
 | ID | Name | Publisher |  Link   | Price  | 
 | -- |:-------:|:-------------:|:--------:|:--------:|
-| 1  | Hungry Zombie | ANDRYUHA1981 | [Link](https://assetstore.unity.com/packages/3d/characters/hungry-zombie-99750) | Free |
+| 1  | Hungry Zombie | ANDRYUHA1981 | [Link](https://assetstore.unity.com/packages/3d/characters/hungry-zombie-99750){:target="_blank"} | Free |
 | 2  | Skybox Series Free | AVIONX | [Link](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633) | Free |
 | 3  | The Shed | BLACKANT MASTER STUDIO | [Link](https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303) | Free |
 | 4  | Old "USSR" Lamp | ESSPLASHKID | [Link](https://assetstore.unity.com/packages/3d/props/electronics/old-ussr-lamp-110400) | Free |
