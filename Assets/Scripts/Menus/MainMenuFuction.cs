@@ -98,4 +98,9 @@ public class MainMenuFuction : MonoBehaviour
     {
         Application.OpenURL("https://stgdev.netlify.app/");
     }
+
+    public void TutorialButton()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=fSTQoClEAEQ&list=PLI5KGtDrj4HVInyXdx5N2oYUAb9U7rJ4L&index=78&ab_channel=JasonWeimann");
+    }
 }
