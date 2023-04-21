@@ -33,4 +33,4 @@
 - [ ] Working on project game period (09.03.2023 - 05.05.2023)
 - [ ] Handin of the game project (08.05.2023)
 
-### [Youtube Preview of the app: To be added....]()
+### [Youtube Preview of the app](https://youtu.be/XYNmKGC5c9Q)
