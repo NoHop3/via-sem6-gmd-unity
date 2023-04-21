@@ -12,6 +12,7 @@ public class MainMenuFuction : MonoBehaviour
     public int LoadInt;
     void Start()
     {
+        fadeOut.SetActive(false);
         LoadInt = PlayerPrefs.GetInt("AutoSave");
         if (LoadInt > 0)
         {
