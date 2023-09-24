@@ -31,6 +31,6 @@
 - [x] Initial commit of the app (09.03.2023)
 - [x] Initial commit of README.md (09.03.2023) 
 - [x] Working on project game period (09.03.2023 - 21.04.2023)
-- [ ] Handin of the game project (09.05.2023)
+- [x] Handin of the game project (09.05.2023)
 
 ### [Youtube Preview of the app](https://youtu.be/XYNmKGC5c9Q)
